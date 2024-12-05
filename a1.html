@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Slide Show -->
+    <section>
+        <center>
+    <img class="mySlides" src="sha aura.jpg" style="height: 500px;">
+    <img class="mySlides" src="IDK.jpg" style="height: 500px;">
+    <img class="mySlides" src="neymar aura.jpg" style="height: 500px;">
+    <img class="mySlides" src="dybb aura.jpg" style="height: 500px;">
+    <img class="mySlides" src="hala madrid.jpg" style="height: 500px;">
+    <img class="mySlides" src="vegeta... aura.jpg" style="height: 500px;">
+    <img class="mySlides" src="bruh.jpg" style="height: 500px;">
+        </center>
+    </section>
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
